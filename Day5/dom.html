@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id="hid1">This is first heading.</h1>
+    <h2 id="hid2">This is second heading.</h2>
+
+    <button id="bid1">Change caption</button>
+    <button id="bid2">Change color</button>
+
+    <!-- Your 3 buttons -->
+    <button id="redBtn">Red</button>
+    <button id="blueBtn">Blue</button>
+    <button id="greenBtn">Green</button>
+
+    <script>
+        document.getElementById("bid1").addEventListener("click", function() {
+            document.getElementById("hid1").innerHTML = "new value";
+            document.getElementById("hid2").innerHTML = "new value2";
+        });
+
+        document.getElementById("bid2").addEventListener("click", function() {
+            document.getElementById("hid1").style.color = "red";
+            document.getElementById("hid2").style.color = "blue";
+        });
+
+        document.getElementById("redBtn").addEventListener("click", function() {
+            document.body.style.backgroundColor = "red";
+        });
+
+        document.getElementById("blueBtn").addEventListener("click", function() {
+            document.body.style.backgroundColor = "blue";
+        });
+
+        document.getElementById("greenBtn").addEventListener("click", function() {
+            document.body.style.backgroundColor = "green";
+        });
+    </script>
+</body>
+</html>
