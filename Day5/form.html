@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Form</title>
+</head>
+<body>
+
+    <h1>Login Form</h1>
+
+    <form id="fid">
+
+        <input type="text" id="user" placeholder="Enter username">
+        <br><br>
+
+        <input type="password" id="pass" placeholder="Enter password">
+        <br><br>
+
+        <button id="submitBtn" type="submit">Submit</button>
+
+    </form>
+
+    <p id="pid1" style="color:red;"></p>
+
+    <script>
+        document.getElementById("fid").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let nue = document.getElementById("user").value.trim();
+            let err = document.getElementById("pid1");
+
+            if (nue === "") {
+                err.style.color = "red";
+                err.innerHTML = "Name can't be empty";
+            } 
+            else { 
+                err.style.color = "green";
+                err.innerHTML = "Successfully Submitted";
+            }
+        });
+    </script>
+
+</body>
+</html>
