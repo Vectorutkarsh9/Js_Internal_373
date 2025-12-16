@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Horizontal Division Layout</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* MENU BAR */
+        .menu {
+            background-color: #2c3e50;
+            padding: 15px;
+        }
+
+        .menu a {
+            color: white;
+            margin-right: 20px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        /* HORIZONTAL DIVISION */
+        .container {
+            display: flex;
+            height: 400px;
+        }
+
+        .box {
+            flex: 1;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .box1 {
+            background-color: #ecf0f1;
+        }
+
+        .box2 {
+            background-color: #dff9fb;
+        }
+
+        .box3 {
+            background-color: #f6e58d;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- MENU -->
+    <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">Gallery</a>
+        <a href="#">Menu 3</a>
+        <a href="#">Menu 4</a>
+        <a href="#">Menu 5</a>
+    </div>
+
+    <!-- PAGE DIVIDED HORIZONTALLY -->
+    <div class="container">
+
+        <!-- LEFT SECTION -->
+        <div class="box box1">
+            <center>
+                <h3>Left Section</h3>
+                <p>Content of left part</p>
+            </center>
+        </div>
+
+        <!-- MIDDLE SECTION -->
+        <div class="box box2">
+            <center>
+                <h3>Important Notice</h3>
+                <marquee direction="up" onmouseover="this.stop()" onmouseout="this.start()">
+                    Notice 1 <br>
+                    Notice 2 <br>
+                    Notice 3
+                </marquee>
+            </center>
+        </div>
+
+        <!-- RIGHT SECTION (LOGIN) -->
+        <div class="box box3">
+            <center>
+                <h3>Login</h3>
+
+                <form action="log.html" method="get">
+                    <table>
+                        <tr>
+                            <td>Username</td>
+                            <td>
+                                <input type="text" name="username" placeholder="Enter your name" required>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Password</td>
+                            <td>
+                                <input type="password" name="password" placeholder="Enter your passkey">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2" align="center">
+                                <button type="submit">Submit</button>
+                                <button type="reset">Cancel</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2" align="center">
+                                New User ?
+                                <a href="reg.html">Register Here</a>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </center>
+        </div>
+
+    </div>
+
+</body>
+</html>
